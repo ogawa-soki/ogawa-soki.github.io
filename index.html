@@ -1,231 +1,31 @@
 ---
 layout: default
+
 ---
-
-<!-- ========== HERO ========== -->
-<section id="hero" class="hero">
-  <div class="hero__inner">
-    <h1 class="hero__title" id="hero-title">Soki's Blog</h1>
-    <p class="hero__subtitle" id="hero-subtitle">デザイン・コード・日常のあれこれ</p>
-    <a href="#posts" class="hero__cta" id="hero-cta">記事を読む ↓</a>
-  </div>
-</section>
-
-<!-- ========== ABOUT ========== -->
-<section id="about" class="section about">
-  <div class="section__inner">
-    <h2 class="section__heading">About</h2>
-    <div class="about__content">
-      <img
-        class="about__avatar"
-        src="https://octodex.github.com/images/original.png"
-        alt="アバター"
-        width="120"
-      />
-      <div class="about__text">
-        <p>こんにちは！このブログではHTML/CSSの勉強や、GitHub Pagesのカスタマイズについて書いています。</p>
-        <ul class="about__tags" id="about-tags">
-          <li class="tag">GitHub Pages</li>
-          <li class="tag">HTML / CSS</li>
-          <li class="tag">JavaScript</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ========== POSTS ========== -->
-<section id="posts" class="section posts">
-  <div class="section__inner">
-    <h2 class="section__heading">Posts</h2>
-    <div class="posts__grid" id="posts-grid">
-
-      <!-- 記事カード 1 -->
-      <article class="card" id="post-1" data-category="tips">
-        <div class="card__thumb">
-          <img src="https://octodex.github.com/images/original.png" alt="記事サムネイル" />
-        </div>
-        <div class="card__body">
-          <span class="card__category">Tips</span>
-          <h3 class="card__title">
-            <a href="#">GitHub Pagesを使ってみた</a>
-          </h3>
-          <p class="card__excerpt">Jekyllテーマを選んでサイトを公開するまでの手順をまとめました。</p>
-          <time class="card__date" datetime="2026-02-26">2026.02.26</time>
-        </div>
-      </article>
-
-      <!-- 記事カード 2 -->
-      <article class="card" id="post-2" data-category="css">
-        <div class="card__thumb">
-          <img src="https://octodex.github.com/images/original.png" alt="記事サムネイル" />
-        </div>
-        <div class="card__body">
-          <span class="card__category">CSS</span>
-          <h3 class="card__title">
-            <a href="#">インラインCSSからクラスへ移行する</a>
-          </h3>
-          <p class="card__excerpt">インラインスタイルを整理してクラスベースのCSSに切り替えた話。</p>
-          <time class="card__date" datetime="2026-02-20">2026.02.20</time>
-        </div>
-      </article>
-
-      <!-- 記事カード 3 -->
-      <article class="card" id="post-3" data-category="js">
-        <div class="card__thumb">
-          <img src="https://octodex.github.com/images/original.png" alt="記事サムネイル" />
-        </div>
-        <div class="card__body">
-          <span class="card__category">JavaScript</span>
-          <h3 class="card__title">
-            <a href="#">次はJSでエフェクトを作る</a>
-          </h3>
-          <p class="card__excerpt">スクロールアニメーションやパーティクルエフェクトを実装予定。</p>
-          <time class="card__date" datetime="2026-03-01">2026.03.01</time>
-        </div>
-      </article>
-
-    </div><!-- /posts__grid -->
-  </div>
-</section>
-
-<!-- ========== CONTACT ========== -->
-<section id="contact" class="section contact">
-  <div class="section__inner">
-    <h2 class="section__heading">Contact</h2>
-    <p>お気軽にどうぞ。</p>
-    <a class="contact__link" href="https://github.com/ogawa-soki" target="_blank" rel="noopener">
-      GitHub を見る →
-    </a>
-  </div>
-</section>
-
-<!-- ========== STYLES ========== -->
 <style>
-  /* ----- リセット & ベース ----- */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Helvetica Neue', Arial, sans-serif; color: #222; line-height: 1.7; }
-  a { color: #0366d6; text-decoration: underline; }
-
-  /* ----- HERO ----- */
-  .hero {
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-    color: #fff;
-    padding: 4rem 1rem;
+  a{
+    color:#0366d6 !impotant;
+    text-decoration:underline !important;
   }
-  .hero__title  { font-size: clamp(2rem, 6vw, 4rem); font-weight: 800; letter-spacing: .04em; }
-  .hero__subtitle { margin-top: .8rem; font-size: clamp(1rem, 2.5vw, 1.4rem); opacity: .8; }
-  .hero__cta {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: .7rem 2rem;
-    border: 2px solid #fff;
-    border-radius: 2rem;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background .3s, color .3s;
-  }
-  .hero__cta:hover { background: #fff; color: #302b63; }
-
-  /* ----- SECTION 共通 ----- */
-  .section { padding: 5rem 1.5rem; }
-  .section__inner { max-width: 900px; margin: 0 auto; }
-  .section__heading {
-    font-size: 1.8rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    padding-bottom: .5rem;
-    border-bottom: 3px solid #0366d6;
-    display: inline-block;
-  }
-
-  /* ----- ABOUT ----- */
-  .about__content { display: flex; gap: 2rem; align-items: flex-start; flex-wrap: wrap; }
-  .about__avatar  { border-radius: 50%; flex-shrink: 0; }
-  .about__tags    { display: flex; flex-wrap: wrap; gap: .5rem; list-style: none; margin-top: 1rem; }
-  .tag {
-    background: #e8f0fe;
-    color: #0366d6;
-    padding: .25rem .8rem;
-    border-radius: 1rem;
-    font-size: .85rem;
-    font-weight: 600;
-  }
-
-  /* ----- POSTS GRID ----- */
-  .posts__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 1.5rem;
-  }
-  .card {
-    border: 1px solid #e1e4e8;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: transform .3s, box-shadow .3s;
-  }
-  .card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.12); }
-  .card__thumb img { width: 100%; height: 160px; object-fit: cover; display: block; }
-  .card__body { padding: 1rem 1.2rem 1.4rem; }
-  .card__category {
-    font-size: .75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #0366d6;
-    letter-spacing: .06em;
-  }
-  .card__title { margin: .4rem 0 .6rem; font-size: 1.05rem; line-height: 1.4; }
-  .card__title a { color: #222; text-decoration: none; }
-  .card__title a:hover { color: #0366d6; }
-  .card__excerpt { font-size: .9rem; color: #555; margin-bottom: .8rem; }
-  .card__date    { font-size: .8rem; color: #999; }
-
-  /* ----- CONTACT ----- */
-  .contact { background: #f6f8fa; }
-  .contact__link {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: .6rem 1.6rem;
-    background: #0366d6;
-    color: #fff;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: background .3s;
-  }
-  .contact__link:hover { background: #0253b3; }
 </style>
+<h2>プロフィール</h2>
+<p>こんにちは！Octocatのホームページへようこそ。HTMLで編集しています。</p>
 
-<!-- ========== JS (後から拡張するためのフック) ========== -->
-<script>
-  // TODO: ここにスクロールアニメーション・パーティクル等のエフェクトを追加する
-  // 例: Intersection Observer でカードのフェードインなど
+<h3>やってること</h3>
+<ul>
+  <li>GitHub Pagesのカスタマイズ</li>
+  <li>
+    <a href="https://www.google.com" >
+      
+        HTML/CSSの勉強
+      
+    </a>
+  </li>
+</ul>
 
-  document.addEventListener('DOMContentLoaded', () => {
-    // --- スクロールフェードイン雛形 ---
-    const cards = document.querySelectorAll('.card');
-    if ('IntersectionObserver' in window) {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-          }
-        });
-      }, { threshold: 0.15 });
+<h2>おにぎり</h2>
+<img src="https://octodex.github.com/images/original.png" alt="cat" width="300">
 
-      cards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity .5s ease, transform .5s ease';
-        observer.observe(card);
-      });
-    }
-  });
-</script>
+<div style="background-color: #f0f0f0; padding: 10px; border-radius: 5px;">
+  <p>HTMLなら、このようにインラインCSSでスタイルをいじることもできます！</p>
+</div>
